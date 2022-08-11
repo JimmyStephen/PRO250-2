@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &400400945302543096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4224916988346163789}
+  - component: {fileID: 6760726039705429157}
+  m_Layer: 0
+  m_Name: PulseGrenade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4224916988346163789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400400945302543096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7583322218686203592}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6760726039705429157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400400945302543096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7e37b2669a4a3799ecb9fb8490abbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _impactEffectPrefab: {fileID: 0}
+  _impactEffectReturnTime: 2
+  _impactObjectPrefab: {fileID: 2971405447164247505, guid: 508f7826b1eb67c4d9c2967bd7153489, type: 3}
+  _startSpeed: 30
+  _length: 1
+  _maxDistance: 200
+  _maxTime: 5
+  _interpolationDuration: 0.3
+  _interpolationEase: 3
+  _damage: 20
+  _hitType: 1
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 1537
+  _gravity: 20
+  _spawnImpactObjectOnTimeout: 0
+  _canBounce: 0
+  _bounceMask:
+    serializedVersion: 2
+    m_Bits: 1
+  _bounceObjectRadius: 0.05
+  _bounceVelocityMultiplierStart: 0.7
+  _bounceVelocityMultiplierEnd: 0.9
+  _bounceVelocityScale: 8
+  _stopSpeed: 2
+  _bounceSound: {fileID: 0}
+--- !u!1001 &7580380927448819126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4224916988346163789}
+    m_Modifications:
+    - target: {fileID: 1077314475975830, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_Name
+      value: GrenadeBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594929028423882, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: RotationModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199010408459089288, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199033000204293712, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199796082362839204, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114053131614431840, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+--- !u!4 &7583322218686203592 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4419123201565566, guid: 54d50b7ac858bb64488358a8c7731334, type: 3}
+  m_PrefabInstance: {fileID: 7580380927448819126}
+  m_PrefabAsset: {fileID: 0}
