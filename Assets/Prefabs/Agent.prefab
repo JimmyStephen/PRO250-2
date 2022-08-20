@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 7614363783843609501}
   m_Layer: 0
   m_Name: Agent
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,6 @@ MonoBehaviour:
   _weaponsRoot: {fileID: 6249603782933705366}
   _fireTransform: {fileID: 2117859135794692440}
   _firstPersonWeaponOffset: {x: -0.15, y: 0, z: 0}
-  _debugObject: {fileID: 0}
   _weaponSwitchDuration: 0
   _weaponSwapTime: 0
 --- !u!54 &1487471423861541829
