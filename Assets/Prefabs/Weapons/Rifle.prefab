@@ -83,6 +83,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 7922358712448589423}
   _description: Hitscan projectile with flying dummy visual
+  _sharedComponents: []
 --- !u!114 &1721961406106779932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +247,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 1158547543551928695}
   _description: Falling and bouncing kinematic projectile with spawned explosion
+  _sharedComponents: []
 --- !u!114 &8066641208153744762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,6 +509,7 @@ MonoBehaviour:
   _weaponSlot: 2
   _displayName: Rifle
   _icon: {fileID: 21300000, guid: 1281ea96bdc1e3f4e8ee7fa920b17964, type: 3}
+  pickupSlot: 2
 --- !u!1001 &1770525776300408458
 PrefabInstance:
   m_ObjectHideFlags: 0

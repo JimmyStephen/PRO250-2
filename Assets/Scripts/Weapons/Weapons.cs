@@ -44,7 +44,8 @@ namespace Projectiles
 		private TickTimer _switchCooldown { get; set; }
 
 		[SerializeField]
-		private Weapon[] _initialWeapons;
+		//private Weapon[] _initialWeapons;
+		private List<Weapon> _initialWeapons;
 		[SerializeField]
 		private Transform _weaponsRoot;
 		[SerializeField]
@@ -120,7 +121,7 @@ namespace Projectiles
 			int minWeaponSlot = 0;
 
 			// Spawn initial weapons
-			for (int i = 0; i < _initialWeapons.Length; i++)
+			for (int i = 0; i < 2; i++)  //initialWeapons.Length; i++)
 			{
 				var weaponPrefab = _initialWeapons[i];
 				if (weaponPrefab == null)
@@ -138,6 +139,30 @@ namespace Projectiles
 			// Equip first weapon
 			SwitchWeapon(minWeaponSlot, true);
 		}
+
+		public void PickupWeapon(int weaponSlot, int keyInput)
+        {
+			var weaponPrefab = _initialWeapons[weaponSlot];
+			
+
+
+			if (weaponPrefab == null)
+				return;
+
+			var weapon = Runner.Spawn(weaponPrefab, inputAuthority: Object.InputAuthority);
+			weapon.pickupSlot = keyInput;
+
+
+			AddWeapon(weapon);
+
+			int minWeaponSlot = 0;
+			if (minWeaponSlot == 0 || minWeaponSlot > weapon.WeaponSlot)
+			{
+				minWeaponSlot = weapon.WeaponSlot;
+			}
+			SwitchWeapon(minWeaponSlot, true);
+		}
+
 
 		public void OnLateFixedUpdate()
 		{
@@ -309,7 +334,7 @@ namespace Projectiles
 			currentWeapon.transform.localPosition = offset;
 		}
 
-		private void AddWeapon(Weapon weapon)
+		public void AddWeapon(Weapon weapon)
 		{
 			if (weapon == null)
 				return;

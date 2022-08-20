@@ -26,14 +26,17 @@ namespace Projectiles
 
 		// PRIVATE MEMBERS
 
-		[SerializeField]
-		private int _weaponSlot;
+		//[SerializeField]
+		public int _weaponSlot;
 
 		[Header("UI")]
 		[SerializeField]
 		private string _displayName;
 		[SerializeField]
 		private Sprite _icon;
+
+		[SerializeField]
+		public int pickupSlot;
 
 		private WeaponAction[] _weaponActions;
 

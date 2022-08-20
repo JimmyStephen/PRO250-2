@@ -51,6 +51,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 7922358712448589423}
   _description: Long lasting bouncing kinematic projectile handled as standalone
+  _sharedComponents: []
 --- !u!114 &2657901811068956336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +314,7 @@ MonoBehaviour:
   _weaponSlot: 7
   _displayName: Ricochet Gun
   _icon: {fileID: 21300000, guid: df06f4bb577cd6c419c2de6642464e88, type: 3}
+  pickupSlot: 7
 --- !u!1 &7577440830487802877
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +366,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 7922358712448589423}
   _description: Fast ricochet kinematic projectile
+  _sharedComponents: []
 --- !u!114 &4986575709922556080
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -148,6 +148,7 @@ MonoBehaviour:
   _weaponSlot: 4
   _displayName: Laser Gun
   _icon: {fileID: 21300000, guid: d7ca620a32cc37d4aa7fba00af17230c, type: 3}
+  pickupSlot: 4
 --- !u!114 &5103788692885372427
 MonoBehaviour:
   m_ObjectHideFlags: 0

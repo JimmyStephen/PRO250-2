@@ -148,6 +148,7 @@ MonoBehaviour:
   _weaponSlot: 3
   _displayName: Shotgun
   _icon: {fileID: 21300000, guid: d6ea741f9161f3c4197b15ccac8c8a97, type: 3}
+  pickupSlot: 3
 --- !u!114 &5006609347845409707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 7922358712448589423}
   _description: Hitscan projectile with instant visuals
+  _sharedComponents: []
 --- !u!114 &8708300491514308335
 MonoBehaviour:
   m_ObjectHideFlags: 0
