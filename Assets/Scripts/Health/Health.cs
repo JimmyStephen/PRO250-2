@@ -105,6 +105,7 @@ namespace Projectiles
 
 			if (IsAlive == false)
 			{
+				Debug.Log("Implement Lives Here?");
 				hitData.IsFatal = true;
 			}
 
