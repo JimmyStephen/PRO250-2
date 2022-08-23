@@ -20,6 +20,12 @@ namespace Projectiles
 		[Networked, HideInInspector]
 		public float   CurrentHealth { get; private set; }
 
+		[HideInInspector]
+		public int CurrentLives { get; set; }
+
+		[HideInInspector]
+		public bool UseLives { get; set; }
+
 		// PRIVATE MEMBERS
 
 		[SerializeField]
@@ -105,7 +111,12 @@ namespace Projectiles
 
 			if (IsAlive == false)
 			{
-				Debug.Log("Implement Lives Here?");
+
+				if (UseLives) CurrentLives--;
+				if(CurrentLives <= 0 && UseLives)
+                {
+					//Put some code here
+                }
 				hitData.IsFatal = true;
 			}
 
@@ -258,5 +269,12 @@ namespace Projectiles
 			public Vector3    Direction { get; set; }
 			public PlayerRef  Instigator;
 		}
-	}
+
+        private void Start()
+        {
+			//Initilize the lives
+			CurrentLives = 1;
+			UseLives = false;
+        }
+    }
 }
