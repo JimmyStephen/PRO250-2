@@ -12,7 +12,7 @@ public class Teleporter : MonoBehaviour
     [SerializeField] Transform landingLocation;
     [SerializeField] float afterTeleportCooldown = 5;
     [Header("Optional")]
-    [SerializeField] bool stopMomentum = false;
+    //[SerializeField] bool stopMomentum = false;
     [SerializeField] bool setRotation = false;
     [SerializeField] float lookYaw = 0;
     [SerializeField] float lookPitch = 0;
@@ -29,18 +29,17 @@ public class Teleporter : MonoBehaviour
     {
         if (cooldown > 0) return;
 
-        Debug.Log("Collided With: " + other.transform.root.name);
         receiver.cooldown = afterTeleportCooldown;
 
         KCC kcc;
         if(other.transform.root.TryGetComponent<KCC>(out kcc)){
-            if (receiver.stopMomentum)
+            /*if (receiver.stopMomentum)
             {
                 //kcc.SetExternalAcceleration(Vector3.zero);
                 //kcc.SetExternalForce(Vector3.zero);
                 //kcc.SetExternalImpulse(Vector3.zero);
                 kcc.SetExternalVelocity(Vector3.zero);
-            }
+            }*/
 
             if (receiver.setRotation)
             {
