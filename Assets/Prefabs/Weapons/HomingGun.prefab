@@ -115,6 +115,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 7922358712448589423}
   _description: Kinematic homing projectile
+  _sharedComponents: []
 --- !u!114 &5621785790416741699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +314,7 @@ MonoBehaviour:
   _weaponSlot: 6
   _displayName: Homing Gun
   _icon: {fileID: 21300000, guid: c4efc0eff8f89294abfc5e27e958edb1, type: 3}
+  pickupSlot: 6
 --- !u!1 &7701680499362621069
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +366,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _barrelTransform: {fileID: 7922358712448589423}
   _description: Kinematic homing projectile with spawned explosion
+  _sharedComponents: []
 --- !u!114 &3416034406883557855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a655013f0fd5cd4ca8ea35b50b7086a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a655013f0fd5cd4ca8ea35b50b7086a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -497,7 +500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a655013f0fd5cd4ca8ea35b50b7086a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.035
+      value: 0.043
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a655013f0fd5cd4ca8ea35b50b7086a, type: 3}
       propertyPath: m_LocalRotation.w

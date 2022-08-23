@@ -26,6 +26,8 @@ namespace Projectiles
 		[SerializeField]
 		private Vector3 _jumpImpulse = new Vector3(0f, 6f, 0f);
 
+		public Transform _weapon;
+
 		// MONOBEHAVIOUR
 
 		protected override void Awake()
@@ -119,7 +121,6 @@ namespace Projectiles
 		{
 			Weapons.OnLateFixedUpdate();
 		}
-
 		protected override void ProcessRenderInput()
 		{
 			if (Owner == null || Health.IsAlive == false)

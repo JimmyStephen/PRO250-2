@@ -260,16 +260,18 @@ namespace Projectiles
 			_renderInput.Buttons.Set(EInputButtons.Jump, Input.GetKey(KeyCode.Space));
 			_renderInput.Buttons.Set(EInputButtons.Reload, Input.GetKey(KeyCode.R));
 
-			for (int i = (int)KeyCode.Alpha0; i <= (int)KeyCode.Alpha9; i++)
-			{
-				if (Input.GetKey((KeyCode)i) == true)
-				{
-					_renderInput.WeaponButton = (byte)(i - (int)KeyCode.Alpha0 + 1);
-					break;
-				}
-			}
 
-			if (_renderInput.WeaponButton == 0)
+			//if the following for loop is commented out, it will stop registering the numbers for input.
+            for (int i = (int)KeyCode.Alpha0; i <= (int)KeyCode.Alpha9; i++)
+            {
+                if (Input.GetKey((KeyCode)i) == true)
+                {
+                    _renderInput.WeaponButton = (byte)(i - (int)KeyCode.Alpha0 + 1);
+                    break;
+                }
+            }
+
+            if (_renderInput.WeaponButton == 0)
 			{
 				_renderInput.WeaponButton = GetScrollWeaponButton();
 			}
