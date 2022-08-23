@@ -261,7 +261,7 @@ namespace Projectiles
 			_renderInput.Buttons.Set(EInputButtons.Reload, Input.GetKey(KeyCode.R));
 
 
-			//if the following for loop is commented out, it will stop registering the numbers for input.
+			//if the following for loop is commented out, it will stop registering the numbers for input for weapon change.
             for (int i = (int)KeyCode.Alpha0; i <= (int)KeyCode.Alpha9; i++)
             {
                 if (Input.GetKey((KeyCode)i) == true)

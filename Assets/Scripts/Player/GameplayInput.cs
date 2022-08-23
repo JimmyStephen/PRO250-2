@@ -9,6 +9,7 @@ namespace Projectiles
 		AltFire  = 1,
 		Jump     = 2,
 		Reload   = 3,
+		SwapWeapons = 4,
 	}
 
 	public struct GameplayInput : INetworkInput
