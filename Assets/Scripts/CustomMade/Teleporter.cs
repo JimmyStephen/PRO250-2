@@ -33,14 +33,6 @@ public class Teleporter : MonoBehaviour
 
         KCC kcc;
         if(other.transform.root.TryGetComponent<KCC>(out kcc)){
-            /*if (receiver.stopMomentum)
-            {
-                //kcc.SetExternalAcceleration(Vector3.zero);
-                //kcc.SetExternalForce(Vector3.zero);
-                //kcc.SetExternalImpulse(Vector3.zero);
-                kcc.SetExternalVelocity(Vector3.zero);
-            }*/
-
             if (receiver.setRotation)
             {
                 kcc.TeleportRPC(receiver.landingLocation.position, receiver.lookPitch, receiver.lookYaw);
