@@ -54,7 +54,6 @@ namespace Projectiles
 		{
 			if (Runner.IsServer == false)
 				return;
-
 			EnableRagdoll(true);
 			_networkRigidbody.Rigidbody.AddForceAtPosition(hit.Direction * _hitImpulse, hit.Position);
 		}

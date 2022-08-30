@@ -1,6 +1,7 @@
 namespace Fusion.KCC
 {
-	using System;
+    
+    using System;
 	using System.Collections.Generic;
 	using UnityEngine;
 	using UnityEngine.Profiling;
@@ -198,7 +199,19 @@ namespace Fusion.KCC
 		private static readonly Action<IKCCProcessor, KCC, KCCData> _stay                  = (processor, kcc, data) => processor.Stay(kcc, data);
 		private static readonly Action<IKCCProcessor, KCC, KCCData> _interpolate           = (processor, kcc, data) => processor.Interpolate(kcc, data);
 
+		[HideInInspector] public Projectiles.SpawnPoint[] _spawnPoints;
+
 		// PUBLIC METHODS
+
+		public void setSpawnpoints(Projectiles.SpawnPoint[] spawnPoints)
+        {
+			_spawnPoints = spawnPoints;
+        }
+		public Projectiles.SpawnPoint[] GetSpawnPoints()
+        {
+			return _spawnPoints;
+        }
+
 
 		/// <summary>
 		/// Set non-interpolated world space input direction. Vector with magnitude greater than 1.0f is normalized.

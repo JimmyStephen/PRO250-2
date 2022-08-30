@@ -11,14 +11,27 @@ namespace Projectiles
 		[Networked, HideInInspector, Capacity(200)]
 		public NetworkDictionary<PlayerRef, Player> Players { get; }
 
+
 		// PRIVATE METHODS
 
+		private SpawnPoint[] defaultSpawnpoints;
 		private SpawnPoint[] _spawnPoints;
 		private int _lastSpawnPoint = -1;
 
 		private List<SpawnRequest> _spawnRequests = new List<SpawnRequest>();
 
-		// PUBLIC METHODS
+        // PUBLIC METHODS
+
+        //set the spawn points
+        public void setSpawnpoints(SpawnPoint[] newSpawnpoints)
+        {
+			_spawnPoints = newSpawnpoints;
+        }
+		//reset spawnpoints
+		public void resetSpawnPoints()
+        {
+			_spawnPoints = null;
+        }
 
 		public void Join(Player player)
 		{
@@ -125,7 +138,6 @@ namespace Projectiles
 			player.AssignAgent(agent);
 
 			agent.Health.FatalHitTaken += OnFatalHitTaken;
-
 			OnPlayerAgentSpawned(agent);
 		}
 
@@ -168,11 +180,28 @@ namespace Projectiles
 			}
 		}
 
+		bool firstRun = true;
 		private Agent SpawnAgent(PlayerRef inputAuthority, Agent agentPrefab)
 		{
-			if (_spawnPoints == null)
+            if (firstRun)
+            {
+				SpawnPoint[] temp = Runner.SimulationUnityScene.FindObjectsOfTypeInOrder<SpawnPoint>(true);
+				List<SpawnPoint> temp2 = new List<SpawnPoint>();
+				foreach(var v in temp)
+                {
+                    if (v.isActiveAndEnabled)
+                    {
+						temp2.Add(v);
+                    }
+                }
+				defaultSpawnpoints = temp2.ToArray();
+				_spawnPoints = defaultSpawnpoints;
+				firstRun = false;
+			}
+
+			if (_spawnPoints == null || _spawnPoints.Length <= 0)
 			{
-				_spawnPoints = Runner.SimulationUnityScene.FindObjectsOfTypeInOrder<SpawnPoint>(true);
+				_spawnPoints = defaultSpawnpoints;
 			}
 
 			_lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPoints.Length;

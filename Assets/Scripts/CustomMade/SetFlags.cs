@@ -1,4 +1,6 @@
+using Fusion.KCC;
 using Projectiles;
+//using Projectiles;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +13,7 @@ public class SetFlags : MonoBehaviour
     [SerializeField] bool setLives = false;
     [SerializeField] bool useLives = false;
     [SerializeField] bool resetHealth = false;
+    [SerializeField] bool setSpawnpoints = false;
     [SerializeField] bool giveGuns = false;
 
     [Header("More Info")]
@@ -21,6 +24,8 @@ public class SetFlags : MonoBehaviour
     [Header("Team names, leave blank to have it auto choose")]
     [SerializeField] string teamName = null;
     [SerializeField] string[] teamNames;
+    [Header("What are the spawnpoints")]
+    [SerializeField] SpawnPoint[] spawnPoints;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -41,7 +46,19 @@ public class SetFlags : MonoBehaviour
             }
         }
 
+        other.transform.root.TryGetComponent<KCC>(out KCC kcc);
+        if(kcc != null && setSpawnpoints)
+        {
+            foreach(var sp in spawnPoints)
+            {
+                sp.SetActive(true);
+            }
+            kcc.setSpawnpoints(spawnPoints);
+        }
+
+
         other.transform.root.TryGetComponent<Health>(out Health health);
+        Debug.Log("Health Found: " + (health != null));
         if (health == null) return;
 
         if (setImmortal)
@@ -58,6 +75,7 @@ public class SetFlags : MonoBehaviour
         if (setLives)
         {
             //set the lives
+            Debug.Log("Set Lives to: " + lives);
             health.CurrentLives = lives;
         }
 

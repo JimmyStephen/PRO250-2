@@ -3,7 +3,8 @@ using Fusion;
 
 namespace Projectiles
 {
-	using UnityEngine;
+    using Fusion.KCC;
+    using UnityEngine;
 
 	public class Health : ContextBehaviour, IHitTarget, IHitInstigator
 	{
@@ -113,11 +114,31 @@ namespace Projectiles
 			{
 
 				if (UseLives) CurrentLives--;
-				if(CurrentLives <= 0 && UseLives)
+
+				if(CurrentLives < 0 && UseLives)
                 {
-					//Put some code here
+					Debug.Log("You ran out of lives");
+					FindObjectOfType<Gameplay>().resetSpawnPoints();
                 }
-				hitData.IsFatal = true;
+                else
+                {
+					if (CurrentLives == 0)
+					{
+						Debug.Log("Final Life");
+					}
+					else
+					{
+						Debug.Log(CurrentLives + " live(s) left");
+					}
+
+					KCC kcc = transform.root.GetComponent<KCC>();
+					if (kcc != null)
+                    {
+						FindObjectOfType<Gameplay>().setSpawnpoints(kcc.GetSpawnPoints());
+					}
+                }
+
+       			hitData.IsFatal = true;
 			}
 
 			if (Object.HasStateAuthority == true)
