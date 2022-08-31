@@ -19,7 +19,7 @@ namespace Projectiles
 		public float   MaxHealth     => _maxHealth;
 
 		[Networked, HideInInspector]
-		public float   CurrentHealth { get; private set; }
+		public float   CurrentHealth { get; set; }
 
 		[HideInInspector]
 		public int CurrentLives { get; set; }
