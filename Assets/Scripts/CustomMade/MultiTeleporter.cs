@@ -41,7 +41,7 @@ public class MultiTeleporter : MonoBehaviour
         }
     }
 
-    private Location GetValidLocation(string teamColor)
+    public Location GetValidLocation(string teamColor)
     {
         foreach(var v in receivers)
         {

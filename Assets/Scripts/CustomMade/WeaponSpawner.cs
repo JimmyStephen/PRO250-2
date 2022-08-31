@@ -7,10 +7,13 @@ public class WeaponSpawner : MonoBehaviour
     [Header("List of what can be spawned")]
     [SerializeField] GameObject[] weapons;
     [Header("How long between weapon spawns")]
-    [SerializeField] float minTime = 0;
-    [SerializeField] float maxTime = 5;
+    public float minTime = 0;
+    public float maxTime = 5;
 
     private float timer = 0;
+
+    //for testing
+    public float getTimer() { return timer; }
 
     void Start()
     {

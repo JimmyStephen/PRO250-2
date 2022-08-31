@@ -42,7 +42,30 @@ public class Teleporter : MonoBehaviour
                 kcc.SetPosition(receiver.landingLocation.position);
             }
         }
+    }
 
+    //test trigger enter
+    //0 it is on cd, 1 it made it through without teleporting, 2 it teleported
+    public int OnTestTriggerEnter(Collider other)
+    {
+        if (cooldown > 0) return 0;
 
+        receiver.cooldown = afterTeleportCooldown;
+
+        KCC kcc;
+        if (other.transform.root.TryGetComponent<KCC>(out kcc))
+        {
+            if (receiver.setRotation)
+            {
+                kcc.TeleportRPC(receiver.landingLocation.position, receiver.lookPitch, receiver.lookYaw);
+            }
+            else
+            {
+                kcc.SetPosition(receiver.landingLocation.position);
+            }
+            return 2;
+        }
+
+        return 1;
     }
 }
