@@ -50,8 +50,10 @@ MonoBehaviour:
   setLives: 0
   useLives: 0
   resetHealth: 0
+  giveGuns: 0
   immortalityDuration: 0
   lives: 1
+  weaponsToGive: []
   teamName: 
   teamNames: []
 --- !u!65 &127715302
@@ -62,7 +64,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3994531083976476480}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 4, z: 2}
