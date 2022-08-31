@@ -115,14 +115,14 @@ namespace Projectiles
 
 				if (UseLives) CurrentLives--;
 
-				if(CurrentLives < 0 && UseLives)
+				if(CurrentLives <= 0 && UseLives)
                 {
 					Debug.Log("You ran out of lives");
 					FindObjectOfType<Gameplay>().resetSpawnPoints();
                 }
                 else
                 {
-					if (CurrentLives == 0)
+					if (CurrentLives == 1)
 					{
 						Debug.Log("Final Life");
 					}
