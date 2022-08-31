@@ -239,9 +239,6 @@ namespace Projectiles
 		{
 			Vector2 moveDirection     = Vector2.zero;
 			Vector2 lookRotationDelta = new Vector2(-Input.GetAxisRaw("Mouse Y"), Input.GetAxisRaw("Mouse X"));
-			//multiply by the sensitivity
-			lookRotationDelta *= 3;
-
 
 			if (Input.GetKey(KeyCode.W) == true) { moveDirection += Vector2.up;    }
 			if (Input.GetKey(KeyCode.S) == true) { moveDirection += Vector2.down;  }
