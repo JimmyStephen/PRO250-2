@@ -13,6 +13,7 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+       
         // Debug.Log("We've made contact - " + other.tag);
         if (other.transform.root.CompareTag("Player"))
         {

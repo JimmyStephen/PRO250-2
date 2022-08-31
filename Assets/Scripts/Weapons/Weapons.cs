@@ -90,6 +90,8 @@ namespace Projectiles
 			}
 		}
 
+
+
 		public void SwitchWeapon(int weaponSlot, bool immediate)
 		{
 			if (weaponSlot < 0 || weaponSlot >= _weapons.Length)
@@ -110,6 +112,27 @@ namespace Projectiles
 				StartWeaponSwitch(weaponSlot);
 			}
 		}
+
+		//public void SwitchWeaponInput(int index, bool immediate)
+		//{
+		//	if (weaponSlot < 0 || weaponSlot >= _weapons.Length)
+		//		return;
+
+		//	var weapon = _weapons[weaponSlot];
+		//	if (weapon == null)
+		//		return;
+
+		//	if (immediate == true || _weaponSwitchDuration <= 0f)
+		//	{
+		//		PendingWeaponSlot = weaponSlot;
+		//		CurrentWeaponSlot = weaponSlot;
+		//		_switchCooldown = default;
+		//	}
+		//	else
+		//	{
+		//		StartWeaponSwitch(weaponSlot);
+		//	}
+		//}
 
 		public void OnSpawned()
 		{

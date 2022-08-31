@@ -80,6 +80,8 @@ GameObject:
   - component: {fileID: 8852468876347309728}
   - component: {fileID: 4541760003008174519}
   - component: {fileID: 4803269553721574647}
+  - component: {fileID: -2011386897077026817}
+  - component: {fileID: -8241115124432151029}
   m_Layer: 7
   m_Name: Sniper
   m_TagString: Untagged
@@ -277,6 +279,31 @@ MonoBehaviour:
     _fireKickback: 20
     _speed: 30
     _returnSpeed: 10
+--- !u!114 &-2011386897077026817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878640978823650109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fcd532893d73b42a30d54e783b8494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!114 &-8241115124432151029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878640978823650109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e39967344142345b3ec00f5c1d17ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1770525776300408458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,6 +445,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -432,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
       propertyPath: m_LocalRotation.w
